@@ -13,11 +13,11 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (data.license === 'MIT') {
+  if (license === 'MIT') {
     return `
   > ### MIT License
   > 
-  > Copyright (c) [2021] [${data.user}]
+  > Copyright (c) [2021] 
   > 
   > __Permission is hereby granted, free of charge, to any person obtaining a copy__
   > __of this software and associated documentation files (the "Software"), to deal__
@@ -37,7 +37,7 @@ function renderLicenseLink(license) {
   > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   > SOFTWARE.
     `
-  } else if (data.license === 'Unlicense') {
+  } else if (license === 'Unlicense') {
     return `
   > __This is free and unencumbered software released into the public domain.__
   > 
@@ -256,20 +256,18 @@ function renderLicenseLink(license) {
 }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  
-}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
   ## Description
-
-  
+   
   ${data.description}
+
+  ##  Project repo
+   
+  [Project Detail](https://github.com/${data.githubuser}/${data.githubrepo})
 
   ## Table of Contents
   * [Installation](#Installation)
@@ -289,7 +287,8 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ${renderLicenseSection(data)}
+  ${renderLicenseLink(data.license)}
+  ${renderLicenseBadge(data.license)}
 
   ## Contributing
 
@@ -301,7 +300,8 @@ function generateMarkdown(data) {
   
   ## Questions
   >Email: ${data.email} 
-  >GitHub : [${data.user}](https://github.com/${data.user})
+  >GitHub : [${data.githubuser}](https://github.com/${data.githubuser})
+  
   `;
 }
 
