@@ -81,7 +81,6 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data,(err,res) => {
         if(err) console.log(err);
-        console.log("Congratulations! Your README.md file was successful and has been generated!")
     })
 
 }
@@ -98,7 +97,8 @@ async function init() {
         console.log("Generating your README next...")
         const markdown = generateMarkdown(userResponses);
         console.log(markdown);
-    
+        console.log("Congratulations! Your README.md file was successful and has been generated!")
+
         await writeToFile('ExampleREADME.md', markdown);
 
     } catch (error) {
