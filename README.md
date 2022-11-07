@@ -10,7 +10,7 @@ This is a professional README generator. Please read notes to understand how to 
 
 ## Notes
 - For instructions watch 'instruction video' which is in 'assets/videos' folder. 
-  click this link to instruction video - https://github.com/ZacharyDonovan88/Professional-README-Generator/tree/main/assets/videos
+  *Click this link to instruction video* - https://github.com/ZacharyDonovan88/Professional-README-Generator/tree/main/assets/videos
   
   *You will have to download video*
 
