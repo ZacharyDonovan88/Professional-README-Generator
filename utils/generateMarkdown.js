@@ -64,7 +64,7 @@ function renderLicenseLink(license) {
   > 
   > For more information, please refer to <https://unlicense.org>
    `
-  } else if (data.license === 'ISC') {
+  } else if (license === 'ISC') {
     return `
   > ### ISC License (ISC)
   > 
@@ -82,7 +82,7 @@ function renderLicenseLink(license) {
   > ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF 
   > OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     `
-  } else if (data.license === 'GNU LGPL') {
+  } else if (license === 'GNU LGPL') {
     return `
   > ### GNU LESSER GENERAL PUBLIC LICENSE
   > Version 3, 29 June 2007
